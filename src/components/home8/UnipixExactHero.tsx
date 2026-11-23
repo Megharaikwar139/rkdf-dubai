@@ -158,13 +158,13 @@ export const UnipixExactHero: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Column: Historic Campus Tower Photograph (matching screenshot right image) */}
-          <div className="lg:col-span-3 hidden lg:flex justify-end order-3">
+          {/* Right Column: Historic Campus Tower Photograph (lowered so heading text is unobstructed) */}
+          <div className="lg:col-span-3 hidden lg:flex justify-end order-3 self-end pb-6">
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7, delay: 0.2 }}
-              className="relative w-56 xl:w-64 aspect-[3/4] rounded-[18px] overflow-hidden shadow-2xl border-4 border-white/10 bg-black/10 -mt-12"
+              className="relative w-56 xl:w-64 aspect-[3/4] rounded-[20px] overflow-hidden shadow-2xl border-4 border-white/10 bg-black/10 translate-y-10 xl:translate-y-16"
             >
               <img
                 src="/assets/home1/img-53.webp"
