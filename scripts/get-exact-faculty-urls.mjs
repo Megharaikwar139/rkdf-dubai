@@ -1,0 +1,16 @@
+import https from 'https';
+
+https.get('https://themewant.com/products/wordpress/unipix/wp-content/uploads/elementor/css/post-12542.css?ver=1790097044', (res) => {
+  let data = '';
+  res.on('data', chunk => data += chunk);
+  res.on('end', () => {
+    for (const id of ['20087c5', 'f078461', '03fb316']) {
+      const idx = data.indexOf(id);
+      if (idx !== -1) {
+        const slice = data.slice(idx, idx + 600);
+        const match = slice.match(/background-image:url\("([^"]+)"\)/);
+        console.log(`${id} image:`, match ? match[1] : 'not found');
+      }
+    }
+  });
+}).on('error', err => console.error(err));
