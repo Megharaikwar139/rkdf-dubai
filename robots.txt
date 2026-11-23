@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rkdfdubai.ac.ae/sitemap.xml
